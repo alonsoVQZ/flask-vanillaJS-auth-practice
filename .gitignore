@@ -1,3 +1,9 @@
+# Replit Stuff
+pyproject.toml
+uv.lock
+.replit
+replit.
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -62,6 +68,7 @@ db.sqlite3
 db.sqlite3-journal
 
 # Flask stuff:
+migrations/
 instance/
 .webassets-cache
 
@@ -120,6 +127,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+.flaskenv
 .env
 .venv
 env/
