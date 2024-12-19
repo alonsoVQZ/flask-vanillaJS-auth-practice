@@ -1,9 +1,10 @@
-from flask import Flask
+from flask import Flask, Blueprint
 from flask_login import LoginManager
 from flask_migrate import Migrate
 
 from config import Config
 from models import db, User
+from routes import api_bp
 
 login_manager = LoginManager()
 migrate = Migrate()
@@ -18,4 +19,5 @@ def create_app():
   db.init_app(app)
   migrate.init_app(app, db)
   login_manager.init_app(app)
+  app.register_blueprint(api_bp, url_prefix='/api')
   return app
